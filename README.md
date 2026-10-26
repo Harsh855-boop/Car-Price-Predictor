@@ -1,50 +1,102 @@
 # Car Price Predictor
 
-Project link: https://car-price-price.herokuapp.com
-Demo Video: https://youtu.be/HEaFU68WAPM
+**Developed by: Harsh Patel**
 
-<img src="https://github.com/rajtilakls2510/car_price_predictor/blob/master/demo.png">
+## Aim
 
+This project aims to predict the resale price of a used car based on its company name, model name, year of purchase, fuel type, and kilometers driven.
 
+## Project Demo
 
-# Aim
+![Car Price Predictor](demo.png)
 
-This project aims to predict the Price of an used Car by taking it's Company name, it's Model name, Year of Purchase, and other parameters.
+![Car Price Prediction Result](predict.png)
 
-<img src="https://github.com/rajtilakls2510/car_price_predictor/blob/master/predict.png">
+## How to Use?
 
-## How to use?
+1. Clone the repository:
 
-1. Clone the repository
-2. Install the required packages in "requirements.txt" file.
+   ```bash
+   git clone https://github.com/Harsh855-boop/Car-Price-Predictor.git
+   ```
 
-Some packages are:
- - numpy 
- - pandas 
- - scikit-learn
+2. Navigate to the project directory:
 
-3. Run the "application.py" file
-And you are good to go. 
+   ```bash
+   cd Car-Price-Predictor
+   ```
 
-# Description
+3. Install the required packages from `requirements.txt`:
 
-## What this project does?
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-1. This project takes the parameters of an used car like: Company name, Model name, Year of Purchase, Fuel Type and Number of Kilometers it has been driven.
-2. It then predicts the possible price of the car. For example, the image below shows the predicted price of our Hyundai Grand i10. 
+   The main packages used include:
+   - NumPy
+   - Pandas
+   - Scikit-learn
+   - Flask
 
-<img src="https://github.com/rajtilakls2510/car_price_predictor/blob/master/predict.png">
+4. Run the application:
 
-## How this project does?
+   ```bash
+   python application.py
+   ```
 
-1. First of all the data was scraped from Quikr.com (https://quikr.com) 
-Link for data: https://github.com/rajtilakls2510/car_price_predictor/blob/master/quikr_car.csv
+5. Open `http://127.0.0.1:5000` in your browser.
 
-2. The data was cleaned (it was super unclean :( ) and analysed.
+## Description
 
-3. Then a Linear Regression model was built on top of it which had 0.92 R2_score.
+### What Does This Project Do?
 
-Link for notebook: https://github.com/rajtilakls2510/car_price_predictor/blob/master/Quikr%20Analysis.ipynb
+1. The application takes the following car details as input:
+   - Company name
+   - Car model
+   - Year of purchase
+   - Fuel type
+   - Number of kilometers driven
 
-4. This project was given the form of an website built on Flask where we used the Linear Regression model to perform predictions.
+2. It uses a trained Machine Learning model to estimate the resale price of the car.
 
+3. The predicted price is displayed on the web interface.
+
+For example, the application can estimate the resale price of a Hyundai Grand i10 based on the details entered by the user.
+
+### How Does This Project Work?
+
+1. The project uses car data originally collected from Quikr.com.
+2. The raw dataset is cleaned and analyzed to prepare it for Machine Learning.
+3. A Linear Regression model is trained using the prepared data.
+4. The trained model is saved in `LinearRegressionModel.pkl`.
+5. Flask loads the saved model and receives the car details from the user.
+6. The model predicts the estimated resale price and displays the result.
+
+## Technologies Used
+
+- Python
+- Flask
+- Pandas
+- NumPy
+- Scikit-learn
+- HTML and CSS
+- Linear Regression
+
+## Project Files
+
+- `application.py` — Flask web application
+- `LinearRegressionModel.pkl` — saved Machine Learning model
+- `Cleaned_Car_data.csv` — cleaned dataset
+- `quikr_car.csv` — raw car dataset
+- `Quikr Analysis.ipynb` — data analysis and model development notebook
+- `templates/` — HTML templates
+- `static/` — CSS and static files
+- `requirements.txt` — project dependencies
+
+## Author
+
+**Harsh Patel**
+
+GitHub: [Harsh855-boop](https://github.com/Harsh855-boop)
+
+Repository: [Car Price Predictor](https://github.com/Harsh855-boop/Car-Price-Predictor)
